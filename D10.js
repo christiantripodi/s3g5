@@ -521,6 +521,12 @@ function removeIndex (number){
 console.log(removeIndex(3))
 
 
+
+
+
+
+
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 
@@ -565,10 +571,10 @@ let testoTd = () => {
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-let linkColor () {
-  let link = document.querySelectorAll("a")
-  toString.forEach((el) => console.log(el.style.backgroundColor = "green"))
-}
+// let linkColor () {
+//   let link = document.querySelectorAll("a")
+//   toString.forEach((el) => console.log(el.style.backgroundColor = "green"))
+// }
 
 
 
@@ -603,9 +609,7 @@ let svuotaLista = () => (document.quesrySelector ("#myList").innerText = "")
 
 
 let aggiungiClasse = () => (document.querySelectorAll("tr"))
-true.forEach((el) => el.classList.add("prova"))
-
-
+tr.forEach((el) => el.classList.add("prova"))
 
 // [EXTRA] JS Avanzato
 
@@ -620,6 +624,13 @@ true.forEach((el) => el.classList.add("prova"))
   ***
 
 */
+
+
+
+
+
+
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
