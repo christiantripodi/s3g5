@@ -160,13 +160,24 @@ console.log(onlyLetters("Ho 4 gatti e 12 cani"))
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+
+
+//???????
+
+
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
 
-
-
+const whatDayIsIt = () => {
+  let today = new Date()
+  let day = today.getDay()
+  let week = ['domenica', 'lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato']
+  return week [day]
+}
+  console.log(whatDayIsIt())
 
 
 
@@ -183,13 +194,48 @@ console.log(onlyLetters("Ho 4 gatti e 12 cani"))
   }
 */
 
+
+function rollTheDices(numero) {
+  let oggetto = {
+    sum: 0,
+    values: [],
+  };
+
+  for (let i = 0; i < numero; i++) {
+    let rndm = dice();
+    oggetto.sum += rndm;
+    oggetto.values.push(rndm);
+  }
+  return oggetto;
+}
+
+  console.log(rollTheDices(4))
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+
+
+const howManyDays = data => {
+  let difference = new Date() - new Date(data)
+  let pastDays = Math.floor(difference / (1000 * 60 * 60 * 24))
+  return pastDays
+}
+
+let myDate = new Date(2024, 3, 5)
+console.log(howManyDays(myDate))
+
+
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+
+
+
+
 
 // Arrays & Oggetti
 
