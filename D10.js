@@ -13,71 +13,60 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
+const sum = 10 + 20;
 
-const sum = 10 + 20
-
-console.log(sum)
-
+console.log(sum);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
+const random = Math.floor(Math.random() * 100);
 
-const random = Math.floor(Math.random()* 100)
-
-console.log(random)
+console.log(random);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
-
 let me = {
   name: "christian",
   surname: "tripodi",
-  age:42,
-}
+  age: 42,
+};
 
-console.log(me)
+console.log(me);
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
-
-delete me.age
-console.log(me)
-
+delete me.age;
+console.log(me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
+me.skills = ["javascript"];
 
-
-me.skills = ["javascript"]
-
-console.log(me)
+console.log(me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
-me.skills.push("Java")
+me.skills.push("Java");
 
-console.log(me)
-
-
+console.log(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
+me.skills.pop();
 
-me.skills.pop()
-
-console.log(me)
+console.log(me);
 
 // Funzioni
 
@@ -85,36 +74,27 @@ console.log(me)
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+function dice() {
+  const dice = Math.floor(Math.random() * 6 + 1);
 
-function dice(){
-
-  const dice = Math.floor(Math.random()* 6 +1)
-
-return dice
-
+  return dice;
 }
 
-console.log(dice())
-
+console.log(dice());
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-function bigger (a, b){
-
-if(a >b){
-  
-  return a
-}else{
-  return b
+function bigger(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
 }
 
-}
-
-console.log(bigger(6, 3))
-
-
+console.log(bigger(6, 3));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -122,14 +102,8 @@ console.log(bigger(6, 3))
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-
-const splitMe = stringa => stringa.split(' ')
-console.log(splitMe('i love coding'))
-
-
-
-
-
+const splitMe = (stringa) => stringa.split(" ");
+console.log(splitMe("i love coding"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
@@ -137,13 +111,13 @@ console.log(splitMe('i love coding'))
 */
 
 const deleteOne = (stringa, booleano) => {
-  if(booleano){
-    return stringa.slice(1)
-  }else{
-    return stringa.slice(0, -1)
+  if (booleano) {
+    return stringa.slice(1);
+  } else {
+    return stringa.slice(0, -1);
   }
-}
-console.log(deleteOne('ciao', false))
+};
+console.log(deleteOne("ciao", false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -151,35 +125,35 @@ console.log(deleteOne('ciao', false))
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
-
 const onlyLetters = (stringa) => stringa.replace(/[0-9]/g, "");
 
-console.log(onlyLetters("Ho 4 gatti e 12 cani"))
+console.log(onlyLetters("Ho 4 gatti e 12 cani"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
-
-
 //???????
-
-
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
-
 const whatDayIsIt = () => {
-  let today = new Date()
-  let day = today.getDay()
-  let week = ['domenica', 'lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato']
-  return week [day]
-}
-  console.log(whatDayIsIt())
-
-
+  let today = new Date();
+  let day = today.getDay();
+  let week = [
+    "domenica",
+    "lunedi",
+    "martedi",
+    "mercoledi",
+    "giovedi",
+    "venerdi",
+    "sabato",
+  ];
+  return week[day];
+};
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -193,7 +167,6 @@ const whatDayIsIt = () => {
       values: [3, 3, 4]
   }
 */
-
 
 function rollTheDices(numero) {
   let oggetto = {
@@ -209,44 +182,35 @@ function rollTheDices(numero) {
   return oggetto;
 }
 
-  console.log(rollTheDices(4))
+console.log(rollTheDices(4));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+const howManyDays = (data) => {
+  let difference = new Date() - new Date(data);
+  let pastDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+  return pastDays;
+};
 
-
-const howManyDays = data => {
-  let difference = new Date() - new Date(data)
-  let pastDays = Math.floor(difference / (1000 * 60 * 60 * 24))
-  return pastDays
-}
-
-let myDate = new Date(2024, 3, 5)
-console.log(howManyDays(myDate))
-
-
+let myDate = new Date(2024, 3, 5);
+console.log(howManyDays(myDate));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 
-
-let myBirthday = new Date(1981, 5, 3)
-const isTodayMyBirthday = data => {
-  let today = new Date()
-  if(data.getMonth() == today.getMonth() && data.getDay() == today.getDay()){
-    return true
-  }else{
-    return false
+let myBirthday = new Date(1981, 5, 3);
+const isTodayMyBirthday = (data) => {
+  let today = new Date();
+  if (data.getMonth() == today.getMonth() && data.getDay() == today.getDay()) {
+    return true;
+  } else {
+    return false;
   }
-}
-console.log(isTodayMyBirthday(myBirthday))
-
-
-
-
+};
+console.log(isTodayMyBirthday(myBirthday));
 
 // Arrays & Oggetti
 
@@ -257,148 +221,136 @@ console.log(isTodayMyBirthday(myBirthday))
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
-
-
 let martialArt = {
   disciplina: "karate",
   stileUno: "Wado-Ryu",
   stileDue: "Shotokan",
-  stileTre: "Shito-Ryu"
+  stileTre: "Shito-Ryu",
 };
 
-
 function deleteProp(obj, str) {
-  if(str === obj.str){
-    delete obj.str
+  if (str === obj.str) {
+    delete obj.str;
   }
-  return obj
+  return obj;
 }
 console.log(deleteProp(martialArt, "stileUno"));
 
-
-
-
-
-
-
 const movies = [
   {
-    Title: 'The Lord of the Rings: The Fellowship of the Ring',
-    Year: '2001',
-    imdbID: 'tt0120737',
-    Type: 'movie',
+    Title: "The Lord of the Rings: The Fellowship of the Ring",
+    Year: "2001",
+    imdbID: "tt0120737",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
 
   {
-    Title: 'The Lord of the Rings: The Return of the King',
-    Year: '2003',
-    imdbID: 'tt0167260',
-    Type: 'movie',
+    Title: "The Lord of the Rings: The Return of the King",
+    Year: "2003",
+    imdbID: "tt0167260",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
   },
   {
-    Title: 'The Lord of the Rings: The Two Towers',
-    Year: '2002',
-    imdbID: 'tt0167261',
-    Type: 'movie',
+    Title: "The Lord of the Rings: The Two Towers",
+    Year: "2002",
+    imdbID: "tt0167261",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
   },
   {
-    Title: 'Lord of War',
-    Year: '2005',
-    imdbID: 'tt0399295',
-    Type: 'movie',
+    Title: "Lord of War",
+    Year: "2005",
+    imdbID: "tt0399295",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
   },
   {
-    Title: 'Lords of Dogtown',
-    Year: '2005',
-    imdbID: 'tt0355702',
-    Type: 'movie',
+    Title: "Lords of Dogtown",
+    Year: "2005",
+    imdbID: "tt0355702",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
   },
   {
-    Title: 'The Lord of the Rings',
-    Year: '1978',
-    imdbID: 'tt0077869',
-    Type: 'movie',
+    Title: "The Lord of the Rings",
+    Year: "1978",
+    imdbID: "tt0077869",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
   },
   {
-    Title: 'Lord of the Flies',
-    Year: '1990',
-    imdbID: 'tt0100054',
-    Type: 'movie',
+    Title: "Lord of the Flies",
+    Year: "1990",
+    imdbID: "tt0100054",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg",
   },
   {
-    Title: 'The Lords of Salem',
-    Year: '2012',
-    imdbID: 'tt1731697',
-    Type: 'movie',
+    Title: "The Lords of Salem",
+    Year: "2012",
+    imdbID: "tt1731697",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg",
   },
   {
-    Title: 'Greystoke: The Legend of Tarzan, Lord of the Apes',
-    Year: '1984',
-    imdbID: 'tt0087365',
-    Type: 'movie',
+    Title: "Greystoke: The Legend of Tarzan, Lord of the Apes",
+    Year: "1984",
+    imdbID: "tt0087365",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg",
   },
   {
-    Title: 'Lord of the Flies',
-    Year: '1963',
-    imdbID: 'tt0057261',
-    Type: 'movie',
+    Title: "Lord of the Flies",
+    Year: "1963",
+    imdbID: "tt0057261",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg",
   },
   {
-    Title: 'The Avengers',
-    Year: '2012',
-    imdbID: 'tt0848228',
-    Type: 'movie',
+    Title: "The Avengers",
+    Year: "2012",
+    imdbID: "tt0848228",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
   },
   {
-    Title: 'Avengers: Infinity War',
-    Year: '2018',
-    imdbID: 'tt4154756',
-    Type: 'movie',
+    Title: "Avengers: Infinity War",
+    Year: "2018",
+    imdbID: "tt4154756",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
   },
   {
-    Title: 'Avengers: Age of Ultron',
-    Year: '2015',
-    imdbID: 'tt2395427',
-    Type: 'movie',
+    Title: "Avengers: Age of Ultron",
+    Year: "2015",
+    imdbID: "tt2395427",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
   },
   {
-    Title: 'Avengers: Endgame',
-    Year: '2019',
-    imdbID: 'tt4154796',
-    Type: 'movie',
+    Title: "Avengers: Endgame",
+    Year: "2019",
+    imdbID: "tt4154796",
+    Type: "movie",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
-]
-
-
-
+];
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -412,18 +364,17 @@ let newestMovie = () => {
   return annoFilm;
 };
 
-console.log(newestMovie())
-
+console.log(newestMovie());
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
-function countMovies () {
-  return movies.length
+function countMovies() {
+  return movies.length;
 }
 
-console.log(countMovies())
+console.log(countMovies());
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
@@ -435,58 +386,44 @@ let onlyTheYears = () => {
   return anniFilm;
 };
 
-console.log(onlyTheYears())
-
-
-
+console.log(onlyTheYears());
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-
 function onlyInLastMillennium() {
   return movies.filter((el) => el.Year < 2000);
-
 }
-console.log(onlyInLastMillennium())
-
-
-
+console.log(onlyInLastMillennium());
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
-
-
 function sumAllTheYears(array) {
   let arrayAnni = movies.map((film) => film.Year);
   let sum = 0;
   for (let i = 0; i < arrayAnni.length; i++) {
-    sum +=  +arrayAnni[i];
+    sum += +arrayAnni[i];
   }
   return sum;
 }
 
 console.log(sumAllTheYears(movies));
 
-
-
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-
-const searchByTitle = stringa => {
-  for(let i = 0; i < movies.length; i++){
-    if(stringa === movies[i].Title){
-      return movies[i]
+const searchByTitle = (stringa) => {
+  for (let i = 0; i < movies.length; i++) {
+    if (stringa === movies[i].Title) {
+      return movies[i];
     }
   }
-}
-console.log(searchByTitle('The Lord of the Rings'))
-
+};
+console.log(searchByTitle("The Lord of the Rings"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -506,66 +443,40 @@ function searchAndDivide(titolo) {
   return obj;
 }
 
-console.log(searchAndDivide('lord'))
+console.log(searchAndDivide("lord"));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-
-
-function removeIndex (number){
-  return movies.filter((el) => movies.indexOf(el) != number)
+function removeIndex(number) {
+  return movies.filter((el) => movies.indexOf(el) != number);
 }
 
-console.log(removeIndex(3))
-
-
-
-
-
-
-
+console.log(removeIndex(3));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
-
-
-
-
-
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-
-
-let id = document.getElementById('nomeiD')
-
-
-
+let id = document.getElementById("nomeiD");
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-
-
-let selezionaTd = document.querySelectorAll("td")
-
-
-
+let selezionaTd = document.querySelectorAll("td");
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
 let testoTd = () => {
-  let td = documenti.querySelectorAll("td")
-  td.forEach((el)=> console.log(el.innerText))
-}
-
-
+  let td = documenti.querySelectorAll("td");
+  td.forEach((el) => console.log(el.innerText));
+};
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -576,40 +487,28 @@ let testoTd = () => {
 //   toString.forEach((el) => console.log(el.style.backgroundColor = "green"))
 // }
 
-
-
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-
 let newList = () => {
-
-  let ul = document.querySelector("myList")
-  let li = document.createElement("li")
-  ul.append(li)
-
-}
-
-
+  let ul = document.querySelector("myList");
+  let li = document.createElement("li");
+  ul.append(li);
+};
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-
-let svuotaLista = () => (document.quesrySelector ("#myList").innerText = "") 
-
-
-
+let svuotaLista = () => (document.quesrySelector("#myList").innerText = "");
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-
-let aggiungiClasse = () => (document.querySelectorAll("tr"))
-tr.forEach((el) => el.classList.add("prova"))
+let aggiungiClasse = () => document.querySelectorAll("tr");
+tr.forEach((el) => el.classList.add("prova"));
 
 // [EXTRA] JS Avanzato
 
@@ -624,13 +523,6 @@ tr.forEach((el) => el.classList.add("prova"))
   ***
 
 */
-
-
-
-
-
-
-
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
