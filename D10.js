@@ -74,15 +74,47 @@ console.log(me)
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
+
+me.skills.pop()
+
+console.log(me)
+
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+
+function dice(){
+
+  const dice = Math.floor(Math.random()* 6 +1)
+
+return dice
+
+}
+
+console.log(dice())
+
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+function bigger (a, b){
+
+if(a >b){
+  
+  return a
+}else{
+  return b
+}
+
+}
+
+console.log(bigger(6, 3))
+
+
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -90,16 +122,39 @@ console.log(me)
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+
+const splitMe = stringa => stringa.split(' ')
+console.log(splitMe('i love coding'))
+
+
+
+
+
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+const deleteOne = (stringa, booleano) => {
+  if(booleano){
+    return stringa.slice(1)
+  }else{
+    return stringa.slice(0, -1)
+  }
+}
+console.log(deleteOne('ciao', false))
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+
+
+const onlyLetters = (stringa) => stringa.replace(/[0-9]/g, "");
+
+console.log(onlyLetters("Ho 4 gatti e 12 cani"))
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
@@ -108,6 +163,12 @@ console.log(me)
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+
+
+
+
+
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
