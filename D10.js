@@ -23,7 +23,7 @@ console.log(sum);
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
-const random = Math.floor(Math.random() * 20);
+const random = Math.floor(Math.random() * 21);
 
 console.log(random);
 
