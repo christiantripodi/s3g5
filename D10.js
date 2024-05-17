@@ -9,6 +9,8 @@ REGOLE
 
 // JS Basics
 
+
+
 /* ESERCIZIO A
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
@@ -524,6 +526,25 @@ tr.forEach((el) => el.classList.add("prova"));
 
 */
 
+
+
+function halfTree(n){
+
+
+  for (let i = 1; i <= n; i++) {
+    let riga = "";
+    for (let j = 1; j <= i; j++) {
+      riga += "* ";
+    }
+    console.log(riga);
+  }
+  
+  }
+  
+  halfTree(6)
+
+
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -535,6 +556,13 @@ tr.forEach((el) => el.classList.add("prova"));
   *****
 
 */
+
+
+
+
+
+
+
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
