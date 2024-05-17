@@ -233,6 +233,17 @@ console.log(howManyDays(myDate))
 */
 
 
+let myBirthday = new Date(1981, 5, 3)
+const isTodayMyBirthday = data => {
+  let today = new Date()
+  if(data.getMonth() == today.getMonth() && data.getDay() == today.getDay()){
+    return true
+  }else{
+    return false
+  }
+}
+console.log(isTodayMyBirthday(myBirthday))
+
 
 
 
@@ -246,9 +257,38 @@ console.log(howManyDays(myDate))
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+
+
+let martialArt = {
+  disciplina: "karate",
+  stileUno: "Wado-Ryu",
+  stileDue: "Shotokan",
+  stileTre: "Shito-Ryu"
+};
+
+
+function deleteProp(obj, str) {
+  if(str === obj.str){
+    delete obj.str
+  }
+  return obj
+}
+console.log(deleteProp(martialArt, "stileUno"));
+
+
+
+
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+
+
+
+
+
+
+
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
