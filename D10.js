@@ -33,7 +33,7 @@ console.log(random)
 */
 
 
-const me = {
+let me = {
   name: "christian",
   surname: "tripodi",
   age:42,
@@ -46,17 +46,29 @@ console.log(me)
 */
 
 
-
-
+delete me.age
+console.log(me)
 
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
+
+
+me.skills = ["javascript"]
+
+console.log(me)
+
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
+
+me.skills.push("Java")
+
+console.log(me)
+
+
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
